@@ -1,0 +1,21 @@
+
+#include "list.h"
+
+
+int main()
+{
+	elem* curr = add(0), *head = curr, *tail = curr;
+	for (int i = 1; i < 10; i++)
+	{
+		addBeginElem(i, &head);
+	}
+	printList(head);
+	insert(5, 0, &head);
+	appand(0, &tail);
+	printList(head);
+	deleteElem(5, &head, &tail);
+	sortList(&head);
+	printList(head);
+	_getch();
+	return 0;
+}
